@@ -1,6 +1,6 @@
 import random
 import tweepy
-
+import emoji
 
 from pytz import timezone, utc
 
@@ -14,7 +14,6 @@ CONSUMER_SECRET = 'xxx'
 ACCESS_TOKEN = 'xxx'
 ACCESS_TOKEN_SECRET = 'xxx'
 
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
@@ -27,7 +26,7 @@ TAPI = tweepy.API(auth)
 ### 
 PHRASE_BOOK = [
     "IT'S FALL",
-    "🍁 🍂 🎃 ☕ 🍃",
+    ":maple_leaf: :fallen_leaf: :jack_o_lantern: :coffee: :leaves:"
 ]
 FALL_START = datetime(2018, 10, 21)
 
@@ -84,8 +83,9 @@ def randomize_day():
 
 
 def post_to_twitter():
-    p = random.choice(PHRASE_BOOK) % get_time_till_fall()
-
+    p = emoji.emojize(random.choice(PHRASE_BOOK), use_aliases=True) 
+    p += " "
+    p += get_time_till_fall()
     print (p)
     TAPI.update_status(status=p)
 
