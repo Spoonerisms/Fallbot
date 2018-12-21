@@ -9,11 +9,6 @@ from time import sleep
 
 from datetime import datetime, timedelta, date
 
-CONSUMER_KEY = 'cBpbFTnsfRythnnbvwfby7RbE'
-CONSUMER_SECRET = 'ajdkkHpKUZI57Y72tysTzXGyi4I2g8xanxmbOtOE20icy4Qd8u'
-ACCESS_TOKEN = '897666750640029697-vv9gHJz5rjgRzm53ozaK6bQbVwRpVFC'
-ACCESS_TOKEN_SECRET = 'CYEAsLSCXISWurP9iSvvt8lMc2FvNcE30loxo4c5e8uuE'
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
