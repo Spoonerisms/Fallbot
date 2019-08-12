@@ -18,10 +18,14 @@ TAPI = tweepy.API(auth)
 
 ###
 PHRASE_BOOK = [
-    "IT'S FALL",
-    "🍁 🍂 🎃 ☕ 🍃",
+    "My favorite season starts in %s",
+    "Only %s until fall",
+    "I only have to wait %s until fall",
+    "Hot toddies for everyone when fall starts in %s",
+    "Summer sucks",
+    "Fall starts in %s",
 ]
-FALL_START = datetime(2018, 10, 21)
+FALL_START = datetime(2019, 9, 23)
 
 LAST_RUN_LOG_FILE = 'last_run.log'
 
